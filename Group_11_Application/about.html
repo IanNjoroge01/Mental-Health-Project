@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Mental Health Statistics App</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>About the Mental Health Statistics App</h2>
+  <p>
+    This Shiny app provides an interactive exploration of global mental health statistics. 
+    It aims to present key insights into the prevalence, impact, and trends of mental health conditions worldwide.
+  </p>
+  
+  <h3>Data Sources</h3>
+  <ul>
+    <li><a href="https://www.hopechest.org/global-mental-health-statistics/" target="_blank">HopeChest - Global Mental Health Statistics</a></li>
+    <li><a href="https://unitedgmh.org/mental-health-data/" target="_blank">United for Global Mental Health</a></li>
+    <li><a href="https://ourworldindata.org/mental-health#all-charts" target="_blank">Our World in Data - Mental Health</a></li>
+    <li><a href="https://www.healthdata.org/" target="_blank">Institute for Health Metrics and Evaluation (IHME)
+    </a><br><strong style="color:#030303;">CITATION</strong><br>Global Burden of Disease Collaborative Network.<br>
+         Global Burden of Disease Study 2021 (GBD 2021) Results.<br>
+         Seattle, United States: Institute for Health Metrics and Evaluation (IHME), 2022.<br>
+         Available from <a href="https://vizhub.healthdata.org/gbd-results/" target="_blank">https://vizhub.healthdata.org/gbd-results/</a>.</p></li>
+  </ul>
+
+  <h3>Purpose</h3>
+  <p>
+    The goal of this app is to provide easy access to mental health data, helping researchers, 
+    policymakers, and individuals understand the burden of mental health disorders across different regions.
+  </p>
+
+  <h3>Note on IHME Data</h3>
+  <p>
+    It is important to note that the IHME dataset reports only 231 deaths attributed to mental health disorders, 
+    which is significantly lower than the true global burden of mental health. This discrepancy is likely due to 
+    variations in how deaths are classified and reported across countries, and the challenge of accurately capturing
+     the wide range of conditions that can contribute to mental health-related mortality.
+  </p>
+
+  <p>
+    We also noted that the Global Burden of Disease (GBD) Study 2019 found that deaths and Years of Life 
+    Lost (YLLs) is only for anorexia nervosa which is classified as eating disorders under mental health disorders, 
+    as these were the only mental disorders identified as underlying causes of death in that study. 
+    This suggests that mortality directly attributed to mental disorders is relatively low.
+  </p>
+
+  <p>
+    Given more time we can explore other sources that may have statistics on other mental health disorders besides eating disorders.
+  </p>
+
+  <h3>Burden</h3>
+  <p></p>
+Burden of disease studies estimate the population-wide impact of living with diseaseand injury and dying prematurely. 
+They involve calculations using the 
+<strong>Disability-Adjusted LifeYear (DALY)</strong>, where one DALY represents the loss of one year of full health. 
+<strong>DALYs</strong> combine in one measure the 
+<strong>years of life lost to premature mortality (YLLs)</strong> and 
+<strong>years of healthy life lost to disability (YLDs)</strong> to estimate the 
+<strong>overall burden</strong> from each cause of disease and injury.
+  </p>
+
+<h3>IHME-GDB Metrics</h3>
+
+Instead of downloading pre-aggregated data, we resolved to <strong>download the full dataset with all 
+granular details</strong> (sex, age, location) and then aggregate using R.
+
+The dataset provides three metric types:
+<ul>
+<li><strong>Number</strong>: Absolute counts (e.g., total deaths, total cases) which can be summed.</li>
+<li><strong>Percent</strong>: Proportion of total which equires a <strong>weighted average.</strong></li>
+<li><strong>Rate</strong>: Cases per 100,000 people Which Requires a <strong>weighted average.</strong></li>
+</ul>
+
+
+  <h3>Appearance - Theme</h3>
+  <p>We chose to work with custom styling (css/scss) as opposed to shiny themes. 
+  This gives us control in case users recommend their brand (corporate) colours 
+  we can easily customize.</p>
+
+  <h3>Credits</h3>
+  <p>This app was developed by the following authors with an <strong>equal contribution ratio</strong> (<strong>1:1:1</strong>):</p>
+  <ul>
+    <li>Ian Njoroge</li>
+    <li>Celestine Mwikali</li>
+    <li>Joshua Maina</li>
+  </ul>
+
+</div>
+
+</body>
+</html>
